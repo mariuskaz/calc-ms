@@ -1,0 +1,82 @@
+body {
+	background:whitesmoke;
+	margin:-1px;
+}
+.container {
+	display:block;
+	margin:0px auto;
+	padding-top:0px;
+	height:99%;
+	width:90vw;
+}
+.header {
+	background:snow;
+	border-bottom:1px solid darkgray;
+	bbox-shadow:0 0 10px darkgray;
+	color:whitesmoke;
+	position:fixed;
+	padding:7px 5%;
+	top:0;
+	width:90%;
+}
+.list {
+	margin-top:70px;
+	height:100%;
+}
+.thumbnail {
+	cursor:pointer;
+	float:left;
+	height:250px;;
+	width:25%;
+	background:white;
+}
+.thumbnail div {
+	border:1px dashed gray;
+	font-size:11pt;
+	font-weight:bold;
+	height:100%;
+	width:100%;
+	padding:2px;
+	overflow:hidden;
+}
+.thumbnail img { 
+	width:99%;
+	vertical-align:top; 
+}
+.search {
+	background: snow;
+	color:whitesmoke;
+	height:35px;
+	width:300px;
+	border:0;
+	font-size:12pt;
+	outline:none;
+	vertical-align:middle;
+}
+.search:focus {
+	background:white;
+	border-bottom: 2px solid #A2E4FC;
+	color:black;
+}
+.new {
+	float:right;
+	background:white;
+	border:2px solid white;
+	border-radius:33px;
+	cursor:pointer;
+	color:gray;
+	height:33px;
+	width:33px;
+	line-height:33px;
+	font-size:20pt;
+	text-align:center;
+	margins:5px;
+	vertical-align:middle;
+}
+.new:hover {
+	border:2px solid #A2E4FC;
+}
+::placeholderr {
+    color: gray;
+    opacity: 1;
+}

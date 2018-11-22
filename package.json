@@ -1,0 +1,17 @@
+{
+  "name": "calc-ms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security"
+  }
+}
