@@ -11,8 +11,8 @@ body {
 }
 .header {
 	background:snow;
-	border-bottom:1px solid darkgray;
-	bbox-shadow:0 0 10px darkgray;
+	borderr-bottom:1px solid darkgray;
+	box-shadow:0 0 10px darkgray;
 	color:whitesmoke;
 	position:fixed;
 	padding:7px 5%;
