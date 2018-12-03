@@ -14,6 +14,20 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname+"/public/index.html")
 });
 
+app.get('/projects.html', (req, res) => {
+	var html = "", date = new Date().toUTCString()
+	console.log(req.connection.remoteAddress + " - " + date, "GET", "projects.html")
+	fs.readdirSync(data_dir).forEach(file => {
+		if (file.slice(-5)==".html" && file!="template.html") {
+			var id = file.substring(0, file.length - 5)
+			var content = fs.readFileSync(data_dir+"/"+file, 'utf8');
+			var title = content.split("title>")[1]
+			html += "<div class='thumbnail' name='" + id + "'><div><span>"+title+"</span><img src='cloud/"+id+".png'/></div></div>"
+		}
+	})
+	res.send(html)
+});
+
 app.get('/cloud/*', (req, res) => {
 	var doc = path.basename(req.originalUrl)
 	var date = new Date().toUTCString()
