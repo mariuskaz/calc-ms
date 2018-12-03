@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Inquiries</title>
+<title>Documents - Inquiries</title>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1257">
 <link rel="stylesheet" href="css/style.css">
 <script src="code/jquery-1.10.2.js"></script>
@@ -12,16 +12,7 @@
 	<div class="new" name="template" tile="New .thumbnail">&#10010;</div>
 </div>
 <div class="container">
-	<div class="list" id="list">
-		<div class="thumbnail" name="9b663a2b-65b5-4d33-8d23-84f612e079ee"><div><span>Veidrodis baltas, siauras 107086</span><img src='cloud/9b663a2b-65b5-4d33-8d23-84f612e079ee.png'/></div></div>
-		<div class="thumbnail" name="06c324fc-e54c-4ab4-89a2-be6fc30fbcb0"><div><span>TABLE,WH/WH.METAL,BABY,RECT</span><img src='cloud/06c324fc-e54c-4ab4-89a2-be6fc30fbcb0.png'/></div></div>
-		<div class="thumbnail" name="a587900d-00a5-4bf9-9b25-1b5952d91480"><div><span>TABLE,MPSS/GLASS,2LEV</span><img src='cloud/a587900d-00a5-4bf9-9b25-1b5952d91480.png'/></div></div>
-		<div class="thumbnail" name="5b96a904-3a14-4c31-9e71-8e75b611d9a6"><div><span>Barnstationsmobel FURU 600x619x1680</span><img src='cloud/5b96a904-3a14-4c31-9e71-8e75b611d9a6.png'/></div></div>
-		<div class="thumbnail" name="dfeffd55-86f7-4f75-bb63-2b47935bcf4e"><div><span>Lentyna 600</span><img src='cloud/dfeffd55-86f7-4f75-bb63-2b47935bcf4e.png'/></div></div>
-		<div class="thumbnail" name="2da3869d-edc8-4ffe-8066-b183fbf0bfb2"><div><span>Reklama pakabinama</span><img src='cloud/2da3869d-edc8-4ffe-8066-b183fbf0bfb2.png'/></div></div>
-		<div class="thumbnail" name="f03f0ab3-880e-4faf-a8eb-df2d08c8f74f"><div><span>Kasos stalas</span><img src='cloud/f03f0ab3-880e-4faf-a8eb-df2d08c8f74f.png'/></div></div>
-		<div class="thumbnail" name="56d823fb-3c89-4323-82cb-3b9e487002d5"><div><span>Nike stovas avalynei</span><img src='cloud/56d823fb-3c89-4323-82cb-3b9e487002d5.png'/></div></div>
-	</div>
+	<div class="list" id="list"></div>
 </div>
 <br>
 <script>
@@ -38,12 +29,15 @@ $(".new").click(function() {
 	var new_window = window.open('cloud/template.html', '_blank');
 	new_window.focus();
 });
-$(".thumbnail").click(function() {
-	var name = $(this).attr("name");
-	var url = "cloud/" + name + ".html";
-	var new_window = window.open(url, '_blank');
-	new_window.focus();
+$("#list").load("projects.html", function() {
+	$(".thumbnail").click(function() {
+		var name = $(this).attr("name");
+		var url = "cloud/" + name + ".html";
+		var new_window = window.open(url, '_blank');
+		new_window.focus();
+	});
 });
+
 </script>
 </body>
 </html>
