@@ -9,20 +9,23 @@ var server_port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
 	data_dir = process.env.OPENSHIFT_DATA_DIR || __dirname+"/public/cloud"
 
 app.get('/', (req, res) => {
-	console.log("Remote address: "+req.connection.remoteAddress)
+	var date = new Date().toUTCString()
+	console.log(req.connection.remoteAddress + " - " + date, "GET", "index.html")
 	res.sendFile(__dirname+"/public/index.html")
 });
 
 app.get('/cloud/*', (req, res) => {
 	var doc = path.basename(req.originalUrl)
-	console.log("Get file:", doc)
+	var date = new Date().toUTCString()
+	console.log(req.connection.remoteAddress + " - " + date, "GET", doc)
 	res.sendFile(data_dir + "/" + doc)
 });
 
 app.post('/', (req, res) => {
  	var form = new formidable.IncomingForm();
 	form.parse(req, function (err, fields, files) {
-		console.log("Save file:", files.current.name)
+		var date = new Date().toUTCString()
+		console.log(req.connection.remoteAddress + " - " + date, "POST", files.current.name)
 		var temp = files.current.path;
 		var working = data_dir+"/"+files.current.name;
 		fs.copyFile(temp, working, function (err) {
