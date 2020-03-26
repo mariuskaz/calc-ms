@@ -2,4 +2,6 @@
 
 > For experiments on Openshift.com
 
-Simple Node.js app to test OpenShift
+Simple calculation app to test OpenShift + NodeJS.
+
+<img src="https://mariuskaz.github.io/images/calc.png" />
