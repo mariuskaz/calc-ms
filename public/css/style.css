@@ -10,8 +10,7 @@ body {
 	width:90vw;
 }
 .header {
-	background:snow;
-	borderr-bottom:1px solid darkgray;
+	background:white;
 	box-shadow:0 0 10px darkgray;
 	color:whitesmoke;
 	position:fixed;
@@ -44,7 +43,7 @@ body {
 	vertical-align:top; 
 }
 .search {
-	background: snow;
+	background: whitesmoke;
 	color:whitesmoke;
 	height:35px;
 	width:300px;
@@ -55,7 +54,7 @@ body {
 }
 .search:focus {
 	background:white;
-	border-bottom: 2px solid #A2E4FC;
+	border-bottom: 2px solid gray;
 	color:black;
 }
 .new {
@@ -74,7 +73,7 @@ body {
 	vertical-align:middle;
 }
 .new:hover {
-	border:2px solid #A2E4FC;
+	border:2px solid gray;
 }
 ::placeholderr {
     color: gray;
